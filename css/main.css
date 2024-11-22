@@ -1,0 +1,617 @@
+@charset "utf-8";
+
+/* main 공통*/
+
+#main section .main-tit {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+#main section .main-tit .main-img img {
+    display: block;
+}
+
+#main section h2 {
+    font-size: 5rem;
+}
+
+
+/* main-visual */
+#main-visual {
+
+    height: 750px;
+    background: url(../img/main-visual.jpg) no-repeat center top;
+}
+
+#main-visual h3 {
+    font-size: 3.2rem;
+    position: absolute;
+    top: 430px;
+    left: 300px;
+    font-family: 'Cafe24Ssurround', sans-serif;
+}
+
+#main-visual #guide {
+    position: absolute;
+    top: 660px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 880px;
+    z-index: 9;
+}
+
+#main-visual #guide li:nth-child(n+1) {
+    width: calc((100% - 90px) / 5);
+    height: 170px;
+    background-color: #f3ebd6;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    opacity: 85%;
+}
+
+
+#main-visual #guide li:last-child {
+    display: block;
+    width: calc(((100% - 90px) / 5)*2);
+    padding: 20px;
+
+}
+
+#main-visual #guide li img:first-child{
+    transform: scale(1);
+    transition: all 0.5s;
+}
+#main-visual #guide li:hover img:first-child{
+    transform: scale(1.2);
+}
+
+#main-visual #guide .counselling h4 {
+    font-size: 1.9rem;
+}
+
+#main-visual #guide .counselling p {
+    padding-top: 20px;
+}
+#main-visual #guide .counselling p label{
+    margin-right: 5px;
+}
+#main-visual #guide .counselling p #name{
+    margin-right: 15px;
+}
+#main-visual #guide .counselling h4+p input#name {
+    width: 30px;
+}
+
+#main-visual #guide .simon img {
+    display: block;
+    margin-bottom: 15px;
+}
+
+#main-visual #guide li h4 {
+    font-size: 1.9rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+#main-visual #guide .counselling .inp-wrap > div{
+    margin-bottom: 10px;
+}
+#main-visual #guide .counselling .inp-wrap input{
+    height: 20px;
+}
+
+#main-visual #guide #agree+label {
+    font-weight: 300;
+}
+
+#main-visual #guide .agree {
+    position: relative;
+}
+
+#main-visual #guide .agree input[type="checkbox"]{
+    position: absolute;
+    top: 5px;
+    left: 0;
+}
+#main-visual #guide .agree label{
+    padding-left: 20px;
+}
+
+/* clinic */
+
+#clinic {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 300px;
+}
+
+#clinic>img {
+    display: block;
+    position: absolute;
+    top: 240px;
+    left: 42%;
+    z-index: -1;
+    opacity: 0.2;
+}
+
+#clinic .main-tit {
+    margin-top: 240px;
+    margin-bottom: 85px;
+}
+
+#clinic .clinic-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#clinic .clinic-container .clinic-left {
+    animation: leftSlide 2s 1s backwards;
+}
+
+#clinic .clinic-container .clinic-right {
+    animation: rightSlide 2s 1s backwards;
+}
+
+#clinic .clinic-container .clinic-right .clinic-img p {
+    font-size: 2.8rem;
+    text-align: center;
+    padding-top: 15px;
+}
+
+#clinic .clinic-container .clinic-right .content {
+    margin-top: 100px;
+    height: 570px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#clinic .clinic-container .clinic-right .content li {
+    display: flex;
+    justify-content: space-between;
+}
+
+#clinic .clinic-container .clinic-right .content li .clinic-txt {
+    width: 400px;
+    height: 110px;
+    background-color: #f9d899;
+    border-radius: 0 20px;
+    padding: 10px 0;
+}
+
+#clinic .clinic-container .clinic-right .content li .clinic-txt:nth-of-type(2) {
+    background-color: #918075;
+}
+
+#clinic .clinic-container .clinic-right .content li .clinic-txt h4 {
+    font-size: 2.8rem;
+    font-weight: 500;
+    color: #333;
+    text-align: center;
+    position: relative;
+}
+
+#clinic .clinic-container .clinic-right .content li .clinic-txt:nth-of-type(2) h4 {
+    color: #fff;
+}
+
+#clinic .clinic-container .clinic-right .content li .clinic-txt h4::before {
+    content: "";
+    width: 300px;
+    height: 2px;
+    background-color: #333;
+    display: block;
+    position: absolute;
+    top: 35px;
+    left: 50px;
+    margin: 5px 0;
+}
+
+#clinic .clinic-container .clinic-right .content li .clinic-txt:nth-of-type(2) h4::before {
+    background-color: #fff;
+}
+
+
+#clinic .clinic-container .clinic-right .content li .clinic-txt h4 span {
+    font-size: 1.6rem;
+    margin-left: 10px;
+
+}
+
+#clinic .clinic-container .clinic-right .content li .clinic-txt p {
+    display: none;
+    font-weight: 300;
+    font-size: 1.4rem;
+    text-align: center;
+    transition: all 0.5s;
+    margin-top: 10px;
+    color: #333;
+    transition: all 0.5s;
+
+
+}
+
+#clinic .clinic-container .clinic-right .content li .clinic-txt:nth-of-type(2) p {
+    color: #fff;
+}
+
+#clinic .clinic-container .clinic-right .content li .clinic-txt:hover p {
+    display: block;
+}
+
+/* qna */
+#qna {
+    margin-top: 100px;
+    margin-bottom: 200px;
+}
+
+#qna .tab {
+    display: flex;
+    justify-content: space-between;
+}
+
+#qna .tab .tab-cont ul li,
+#qna .tab .tab-btn ul {
+    width: 600px;
+    height: 400px;
+    background-color: #f9f7f0;
+}
+
+#qna .tab .tab-cont ul li h3 {
+    padding: 20px 0;
+    text-align: center;
+}
+
+#qna .tab .tab-cont ul li .answer {
+    margin: 0 auto;
+    width: 500px;
+    height: 280px;
+    background: #918075;
+    position: relative;
+    overflow: hidden;
+    padding: 20px 30px;
+}
+#qna .tab .tab-cont ul li .answer p{
+    font-family: "Nanum Gothic", sans-serif;
+    color: #fff;
+    line-height: 1.5;
+}
+#qna .tab .tab-cont ul li .answer p span{
+    font-size: 1.9rem;
+    font-weight: 600;
+}
+#qna .tab .tab-cont ul li .answer img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.2;
+}
+
+
+#qna .tab .tab-btn ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+#qna .tab .tab-btn ul li {
+    width: 550px;
+    height: calc((100% - 60px) / 4);
+    background-color: #f4d99b;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+#qna .tab .tab-btn ul li p {
+    font-size: 1.9rem;
+}
+
+/* advertisement */
+#advertisement {
+    width: 100%;
+    height: 400px;
+    background-color: #f9f7f0;
+    position: relative;
+}
+
+#advertisement .counsel {
+    display: flex;
+    justify-content: space-between;
+}
+
+#advertisement .counsel .counsel-txt {
+    margin-left: 320px;
+    margin-top: 100px;
+}
+
+#advertisement .counsel .counsel-txt h6 {
+    font-size: 1.9rem;
+}
+
+
+#advertisement .counsel .counsel-txt h6+p {
+    font-size: 2.8rem;
+    margin: 40px 0;
+}
+
+#advertisement .counsel .counsel-img {
+    margin-top: 40px;
+    margin-right: 320px;
+    position: relative;
+}
+
+#advertisement .counsel .counsel-img img:nth-child(2) {
+    position: absolute;
+    top: 10px;
+    right: -130px;
+}
+#advertisement .counsel .counsel-img .naver{
+    position: absolute;
+    top: 30px;
+    right: 0;
+}
+
+
+#advertisement .btn-box {
+    position: absolute;
+    width: 120px;
+    bottom: 80px;
+    left: 310px;
+}
+
+#advertisement .swiper-pagination-fraction {
+    top: auto;
+    left: 50%;
+    text-align: left;
+    width: auto;
+    bottom: 0;
+    transform: translateX(-50%);
+}
+
+#advertisement .arrow {
+    width: 21px;
+    height: 15px;
+    font-size: 0;
+    color: transparent;
+}
+
+#advertisement .arrow.next {
+    background: url(../img/counsel-next.png) no-repeat center;
+
+
+}
+
+#advertisement .arrow.prev {
+    background: url(../img/counsel-prev.png) no-repeat center;
+
+}
+
+
+/* disease */
+#disease {
+    margin-top: 200px;
+}
+
+#disease {
+    background: url(../img/disease_bg.jpg) no-repeat 0 110px;
+}
+
+
+#disease .main-tit {
+
+    margin-bottom: 50px;
+}
+
+#disease .inner .disease-contents {
+    width: 100%;
+    padding: 5% 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+#disease .disease-contents li {
+    width: calc((100% / 6) * 2);
+    text-align: center;
+}
+
+#disease .disease-contents li .disease-icon {
+    width: 220px;
+    height: 220px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    transform: scale(0.8);
+    transition: all 0.5s;
+}
+
+#disease .disease-contents li:hover .disease-icon {
+    transform: scale(1);
+}
+
+#disease .disease-contents li a img {
+    display: inline-block;
+    margin: 10px auto;
+    line-height: 220px;
+}
+
+#disease .disease-contents li p {
+    font-size: 28px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+
+/* aboutus */
+
+#aboutus {
+    margin-top: 200px;
+}
+
+#aboutus .main-tit .main-img {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+
+#aboutus .main-tit .main-img img {
+    display: block;
+
+}
+
+#aboutus .main-tit .main-img img:nth-child(2) {
+    height: 52px;
+}
+
+#aboutus .simonplus1degree {
+    margin-top: 100px;
+}
+
+#aboutus .aboutus {
+    width: 1000px;
+    height: 500px;
+    background-color: #f9ebc7;
+    border-radius: 0 150px;
+    display: flex;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+
+#aboutus .aboutus .aboutus-img {
+    width: 480px;
+    height: 320px;
+    overflow: hidden;
+    padding-left: 10px;
+    border-radius:  0 0 50px 0 ;
+}
+
+#aboutus .aboutus .aboutus-img img {
+    width: 100%;
+}
+
+#aboutus ul .aboutus .aboutus-txt {
+    font-family: "Nanum Gothic", sans-serif;
+    line-height: 1.5;
+    padding: 0 10px;
+    display: flex;
+    justify-content: center;
+}
+
+#aboutus ul .aboutus .aboutus-txt span {
+    font-size: 21px;
+    font-weight: 700;
+}
+
+
+
+/* banner */
+
+#banner {
+    margin: 180px 0 40px;
+    width: 100%;
+    height: 300px;
+    background: url(../img/banner.jpg) no-repeat fixed;
+}
+
+#banner h5,
+#banner p {
+    font-family: "Nanum Gothic", sans-serif;
+    text-align: left;
+    color: #fff;
+}
+
+#banner h5 {
+    font-weight: 700;
+    font-size: 5rem;
+    padding: 30px 0;
+}
+
+#banner p {
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 1.5;
+}
+
+
+/* info */
+
+#info {
+    background-color: #fcfbf7;
+}
+
+#info .inner {
+    padding: 60px 0;
+    display: flex;
+    gap: 70px;
+}
+
+#info .inner .map {
+    margin-left: 120px;
+    position: relative;
+}
+
+#info .inner .map a {
+    width: 130px;
+    height: 35px;
+    display: block;
+    background: url(../img/map-reservation.png) no-repeat center;
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    font-size: 0;
+    color: transparent;
+}
+
+#info .inner .map-txt {
+    width: 650px;
+    height: 400px;
+    background: #fcf4e6;
+    padding: 50px;
+    position: relative;
+}
+
+#info .inner .map-txt h6 {
+    font-weight: 700;
+    font-size: 1.9rem;
+    margin-bottom: 15px;
+}
+
+#info .inner .map-txt p {
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+#info .inner .map-txt p span {
+    font-size: 1.4rem;
+}
+
+#info .inner .map-txt .weekend {
+    font-size: 1.2rem;
+}
+
+#info .inner .map-txt .map-txt-box {
+    position: absolute;
+    top: 185px;
+    left: 320px;
+}
+
+#info .inner .map-txt .map-txt-box p .thur {
+    color: #0aa6d3;
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-size: 1.6rem;
+}
